@@ -1,0 +1,7 @@
+Protocol,Comparison,Mean MCC (first),Mean MCC (second),Folds first > second,W,p-value,Rank-biserial r,"p (Holm, 6 tests)",Significant (Holm)
+A,Random Forest (opt.) vs XGBoost (opt.),0.43532770692604894,0.40058812844550823,10,0.0,0.001953125,1.0,0.01171875,True
+A,Random Forest (opt.) vs Random Forest (baseline),0.43532770692604894,0.3477278657500933,10,0.0,0.001953125,1.0,0.01171875,True
+B,Random Forest (opt.) vs XGBoost (opt.),0.44524671026592627,0.4273665424268013,9,1.0,0.00390625,0.9636363636363636,0.01171875,True
+B,Random Forest (opt.) vs Random Forest (baseline),0.44524671026592627,0.3477278657500933,10,0.0,0.001953125,1.0,0.01171875,True
+C,Random Forest (opt.) vs XGBoost (opt.),0.21362486206880868,0.19451870986723518,8,9.0,0.064453125,0.6727272727272727,0.12890625,False
+C,Random Forest (opt.) vs Random Forest (baseline),0.21362486206880868,0.19882207771296323,7,18.0,0.375,0.34545454545454546,0.375,False
