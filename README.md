@@ -11,12 +11,9 @@ Seven ML models (Random Forest, XGBoost, Gradient Boosting, AdaBoost, Decision T
   - Protocol B (intermediate): random split, threshold calibrated via out-of-fold (OOF) predictions on the training set
   - Protocol C (rigorous): chronological split, OOF-calibrated threshold
 
-This study uses the **AgES dataset** (Shankar et al., 2026), publicly available at:
-    - GitHub: https://github.com/shankasp/AgES
-    - Zenodo: https://doi.org/10.5281/zenodo.14759545
+This study uses the raw AgES file (Raw_AgES_Dataset.zip) from https://github.com/shankasp/AgES, retrieved on 14 April 2026. The file is not redistributed here. To reproduce the results, download and unzip it, and place Raw_AgES_Dataset.csv in the ages-resolution-time folder, next to the pipeline folder. The data preparation notebook (01) rebuilds the processed dataset used by all other notebooks.
 
 **Repository structure**
-
 
 ```
 project_directory/
