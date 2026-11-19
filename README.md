@@ -1,9 +1,9 @@
 # sprint-overrun-prediction
 
 Replication package for sprint-overrun classification study (random vs. chronological split, threshold calibration strategy) 
-The protocol influences reported ML model performance in predicting sprint-overrun risk in Agile project management.
+How Evaluation Protocols Shape Reported Performance: An Empirical Study of Machine Learning for Classifying Long-Resolution Software Issues
 
-This repository contains the code, processed data, and results supporting the paper: **From Permissive to Rigorous: The Impact of Evaluation Protocol on Machine Learning Performance in Agile Sprint Overrun Classification**.
+This repository contains the code, processed data, and results supporting the paper: **How Evaluation Protocols Shape Reported Performance: An Empirical Study of Machine Learning for Classifying Long-Resolution Software Issues**.
 
 Seven ML models (Random Forest, XGBoost, Gradient Boosting, AdaBoost, Decision Tree, Logistic Regression, MLP) are evaluated under three protocols of increasing rigour:
 
@@ -22,44 +22,58 @@ This study uses the **AgES dataset** (Shankar et al., 2026), publicly available 
 project_directory/
 ├── Datasets/
 │   └── df_final.csv
-│   └── table_repository.counts.csv
 ├── Notebooks/
+│   └── ages_common.py
 │   └── 01_data_preparation.py
-│   └── 02_chronological_split_and_benchmark.py
-│   └── 02_random_split_and_benchmark.py
-│   └── 03_chronological_optimization.py
-│   └── 03_random_optimization.py
-│   └── 03_random_oof_threshold.py
-│   └── 04_chronological_statistical_testing.py
-│   └── 04_random_statistical_testing.py
-│   └── 05_cross_project_split.py
-│   └── 06_protocol_comparison.py
+│   └── 02a_random_split_benchmark.py
+│   └── 02b_chronological_split_benchmark.py
+│   └── 03a_random_optimisation.py
+│   └── 03b_chronological_optimisation.py
+│   └── 04_protocols_a_b_c.py
+│   └── 05_statistical_testing.py
+│   └── 06_protocol_comparison_b_vs_c.py
+│   └── 07_cross_project_and_within_repository.py
+│   └── 08_horizon_sensitivity_7_14_21_28.py
+│   └── 09_issue_category.py
+│   └── 10_rolling_origin_cut_off.py
+│   └── 11_creation_time_features.py
 ├── Results/
 │   └── Tables/
-│       └── table_baseline_per_class.csv
-│       └── table_chronological_baseline_full.csv
-│       └── table_chronological_final_test_results.csv
-│       └── table_chronological_split_info.csv
-│       └── table_chronological_wilcoxon.csv
-│       └── table_contextual_correlations.csv
-│       └── table_cross_project_folds_all_models.csv
-│       └── table_feature_ranking_all_protocols.csv
-│       └── table_protocol_deltas_all_models.csv
-│       └── table_random_OOF_final_test_results.csv
-│       └── table_random_OOF_wilcoxon.csv
-│       └── table_random_baseline_full.csv
-│       └── table_random_final_test_results.csv
-│       └── table_random_split_info.csv
-│       └── table_random_wilcoxon.csv
-│       └── table_within_repo_wilcoxon_all_models.csv
+│       └── A_feature_importance.csv
+│       └── A_test_results.csv
+│       └── B_feature_importance.csv
+│       └── B_test_results.csv
+│       └── B_vs_C_bootstrap.csv
+│       └── C_feature_importance.csv
+│       └── C_seen_vs_unseen_repositories.csv
+│       └── C_test_results.csv
+│       └── category_deltas.csv
+│       └── chronological_baseline_full.csv
+│       └── contextual_correlations.csv
+│       └── creation_time_features.csv
+│       └── feature_ranking_all_protocols.csv
+│       └── horizon_delta_summary.csv
+│       └── horizon_rank_stability.csv
+│       └── leave_one_repository_out.csv
+│       └── model_rank_stability.csv
+│       └── protocol_deltas.csv
+│       └── random_baseline_full.csv
+│       └── repository_profile.csv
+│       └── rolling_origin.csv
+│       └── wilcoxon_main.csv
+│       └── within_repo_replication.csv
+│       └── within_repo_wilcoxon.csv
 │   └── Figures/
-│       └──fig_chronological_confusion_matrix.png
-│       └── fig_chronological_feature_importance_top10.png
-│       └── fig_feature_rank_bumpchart.png
-│       └── fig_random_OOF_confusion_matrix.png
-│       └── fig_random_confusion_matrix.png
-│       └── fig_random_feature_importance_top10.png
-│       └── fig_roc_overlay_all_protocols.png
+│       └── A_confusion_matrix.png
+│       └── A_feature_importance_top10.png
+│       └── B_confusion_matrix.png
+│       └── B_feature_importance_top10.png
+│       └── C_confusion_matrix.png
+│       └── C_feature_importance_top10.png
+│       └── category_performance.png
+│       └── feature_rank_bumpchart.png
+│       └── horizon_sensitivity.png
+│       └── roc_all_protocols.png
 ├── requirements.txt
 ```
 
@@ -69,5 +83,5 @@ Notebooks are numbered in the order they should be executed. Each notebook reads
 
 All notebooks were originally run in Google Colab. File paths reference Google Drive by default; adjust the `PROJECT` variable at the top of each notebook if running locally.
 
-All experiments were performed in Google Colab using Python 3.13.15.
+All experiments were performed in Google Colab using Python 3.13.18.
 See **requirements.txt** for exact package versions.
