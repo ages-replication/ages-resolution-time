@@ -30,12 +30,11 @@ df, feature_cols = load_prepared()
 
 CREATION = ['created_hour', 'created_dayofweek', 'title_len', 'log_body_len',
             'n_complexity_words', 'n_urgency_words', 'n_negative_words', 'body_has_steps']
-EXCLUDED = [c for c in feature_cols if c.startswith(('assignee_', 'comp_', 'cat_'))
-            or c in ('n_assignees', 'n_labels', 'is_feature_label', 'has_milestone')]
+DERIVED = [c for c in feature_cols if c.startswith(('cat_', 'comp_'))]
 FEATURE_SETS = {
     'All features': feature_cols,
-    'Without assignee, labels, milestone, category and components': [c for c in feature_cols if c not in EXCLUDED],
-    'Title, body and creation time only': CREATION,
+    'Creation-time, category and components': CREATION + DERIVED,
+    'Creation-time only': CREATION,
 }
 
 d = df.sort_values('Created At').reset_index(drop=True)
