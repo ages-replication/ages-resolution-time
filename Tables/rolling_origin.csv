@@ -1,0 +1,5 @@
+Training share,Cut-off date,Test period end,"Long-resolution, chronological train (%)","Long-resolution, chronological test (%)",Mean dAUC C-B (min to max),Mean dMCC C-B (min to max),Models with lower AUC under C,Models with lower MCC under C,Mean MCC B,Mean MCC C
+50%,2022-05-29,2023-07-28,40.23,41.36,-0.070 (-0.133 to 0.005),-0.101 (-0.187 to -0.031),6/7,7/7,0.29,0.189
+60%,2023-02-03,2023-12-08,40.57,37.74,-0.096 (-0.149 to 0.002),-0.129 (-0.226 to 0.011),6/7,6/7,0.286,0.157
+70%,2023-07-28,2024-03-08,40.56,34.45,-0.034 (-0.069 to 0.002),-0.074 (-0.128 to -0.027),6/7,7/7,0.276,0.202
+80%,2023-12-08,2024-05-11,39.86,32.72,-0.026 (-0.057 to 0.020),-0.050 (-0.121 to 0.042),6/7,6/7,0.268,0.218
