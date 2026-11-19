@@ -1,4 +1,4 @@
 Feature set,Features,Mean Test-AUC B,Mean Test-AUC C,"Mean dAUC C-B (min, max)",Mean MCC B,Mean MCC C,"Mean dMCC C-B (min, max)",Models with lower Test-AUC under C,Models with lower MCC under C
 All features,27,0.693,0.667,"-0.026 (-0.057, 0.020)",0.268,0.218,"-0.050 (-0.121, 0.042)",6/7,6/7
-"Without assignee, labels, milestone and components",12,0.631,0.587,"-0.044 (-0.088, 0.001)",0.161,0.071,"-0.090 (-0.145, -0.053)",6/7,7/7
+"Without assignee, labels, milestone, category and components",9,0.631,0.59,"-0.041 (-0.087, 0.001)",0.161,0.062,"-0.099 (-0.164, -0.051)",6/7,7/7
 "Title, body and creation time only",8,0.595,0.584,"-0.011 (-0.057, 0.019)",0.073,0.006,"-0.066 (-0.113, -0.003)",3/7,7/7
